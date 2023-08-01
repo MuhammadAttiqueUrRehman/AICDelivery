@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundBeige"
+    tools:context="layout.fr_noservice">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/emptyshop"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:scaleType="centerInside"
+            android:src="@drawable/shopempty" />
+
+        <TextView
+            android:id="@+id/labelor"
+            android:layout_width="300dp"
+            android:layout_height="127dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:lines="5"
+            android:text="The service or access is currently not available online.  Please call us on +97143958183. Thank You."
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16dp"
+            android:textStyle="normal" />
+
+        <android.widget.Button
+            android:id="@+id/btnretry"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/labelor"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@layout/round_corner_image_button_main"
+            android:gravity="center"
+            android:text="Home"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundBeige"
+    tools:context="layout.fr_vendorreview">
+
+    <!-- TODO: Update blank fragment layout -->
+    <include layout="@layout/toolbarsearch"
+        android:id="@+id/tbActivityMain"
+        android:visibility="visible"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" />
+
+    <ProgressBar
+        android:id="@+id/progressBar4"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+    <LinearLayout
+        android:id="@+id/fillcart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/tbActivityMain"
+        android:visibility="visible">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/messqagelist"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:listSelector="@android:color/transparent"
+            android:background="@android:color/white"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/emptycart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/emptyshop"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/shopempty"
+                android:gravity="center"
+                android:scaleType="centerInside"/>
+
+            <TextView
+                android:id="@+id/labelor"
+                android:text="There are no reviews currently available."
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="normal"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:lines="2"
+                android:layout_below="@id/tbActivityMainSearch"
+                />
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backgroundBeige"
+    tools:context="layout.fr_reset_pin">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/tbActivityMain"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" />
+
+    <ImageButton
+        android:id="@+id/btnloginclose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tbActivityMain"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="left|top"
+        android:layout_marginStart="15dp"
+        android:background="@null"
+        android:src="@drawable/ico_cross"
+        android:tint="@color/white" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:elevation="5dp"
+        android:layout_below="@id/tbActivityMain"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        card_view:cardCornerRadius="0dp"
+        card_view:contentPadding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/labelor"
+        android:text="Please set a new 4 Digit PIN"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:textAlignment="center"
+        android:maxLength="60"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14dp"
+        android:layout_marginTop="20dp"
+        android:textStyle="normal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:lines="2"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelor"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:id="@+id/loginpart">
+
+
+        <EditText
+            android:id="@+id/txtnewpin"
+            android:layout_marginTop="20dp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:layout_below="@id/labelor"
+            android:maxLength="4"
+            android:inputType="number"
+
+            android:hint="New 4 Digit PIN"
+            android:textColorHint="@color/hintcolor"/>
+    </LinearLayout>
+
+    <android.widget.Button
+        android:id="@+id/btnvalidate"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="@layout/round_corner_image_button_main"
+        android:textColor="@color/white"
+        android:text="Save PIN"
+        android:textSize="14dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/loginpart"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/progressBar10"
+        android:elevation="10dp"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+
+</RelativeLayout>
+
+

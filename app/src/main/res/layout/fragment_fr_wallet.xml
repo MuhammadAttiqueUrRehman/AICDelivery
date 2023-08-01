@@ -1,0 +1,168 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundBeige"
+    tools:context="layout.fr_wallet">
+
+    <!-- TODO: Update blank fragment layout -->
+    <include layout="@layout/toolbar"
+        android:id="@+id/tbActivityMain"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" />
+
+
+    <LinearLayout
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/tbActivityMain"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:id="@+id/loginpart2">
+
+
+
+        <TextView
+            android:id="@+id/lbldesc"
+            android:text="Balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:id="@+id/lblamount"
+            android:text="0.00"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_marginTop="10dp"
+            android:textStyle="normal"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/lbldesc"
+            />
+
+    <LinearLayout
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_below="@id/lblamount"
+        android:id="@+id/loginpart2a">
+        <TextView
+            android:id="@+id/lblcash"
+            android:text="Cash Received: 0.00"
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:textStyle="normal"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:id="@+id/lblsettlement"
+            android:text="Last Settlement: 0.00"
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:textStyle="normal"
+            android:layout_centerHorizontal="true"
+            />
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/fillcart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/loginpart2"
+        android:visibility="visible">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/accountlist"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:listSelector="@android:color/transparent"
+            android:background="@color/backgroundBeige"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/emptycart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/emptyshop"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/shopempty"
+                android:gravity="center"
+                android:scaleType="centerInside"/>
+
+            <TextView
+                android:id="@+id/labelor"
+                android:text="There are no transaction in the wallet"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="normal"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:lines="2"
+                android:layout_below="@id/tbActivityMainSearch"
+                />
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progressBar4"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+</RelativeLayout>

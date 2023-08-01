@@ -1,0 +1,39 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">True</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:actionOverflowMenuStyle">@style/PopupTheme</item>
+        <!-- To change the popup menu and app text color  -->
+        <item name="android:textColor">@color/colorPrimary</item>
+
+        <!-- To change the background of options menu-->
+        <item name="android:itemBackground">@color/white</item>
+    </style>
+
+
+    <style name="toolBarText" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/backgroundBeige</item>
+    </style>
+
+    <style name="toolBarSubText" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <style name="PopupTheme" parent="@style/ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>

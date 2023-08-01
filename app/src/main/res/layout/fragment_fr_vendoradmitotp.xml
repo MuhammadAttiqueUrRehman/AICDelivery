@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundBeige"
+    tools:context="layout.fr_vendoradmitotp">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/tbActivityMain"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" />
+
+
+    <TextView
+        android:id="@+id/labelor"
+        android:text="Please enter 4 digit number from Vendor"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14dp"
+        android:layout_marginTop="20dp"
+        android:textStyle="normal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:lines="2"
+        android:layout_below="@id/tbActivityMain"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelor"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:id="@+id/loginpart">
+
+
+        <EditText
+            android:id="@+id/txtvalidationcode"
+            android:layout_marginTop="20dp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:layout_below="@id/labelor"
+            android:maxLength="4"
+            android:inputType="number"
+            android:hint="4 Digit permission code"
+            android:textColorHint="@color/hintcolor"/>
+    </LinearLayout>
+
+    <android.widget.Button
+        android:id="@+id/btnvalidate"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="@layout/round_corner_image_button_main"
+        android:textColor="@color/white"
+        android:text="Validate"
+        android:textSize="14dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/loginpart"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar9"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+
+</RelativeLayout>
+

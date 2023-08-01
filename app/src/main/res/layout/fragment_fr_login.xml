@@ -1,0 +1,167 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundBeige"
+    android:clickable="false"
+    tools:context="layout.fr_login">
+
+    <include
+        android:id="@+id/tbActivityMain"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentBottom="false"
+        android:layout_centerVertical="true" />
+
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tbActivityMain"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:elevation="5dp"
+        card_view:cardCornerRadius="0dp"
+        card_view:contentPadding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+
+            <LinearLayout
+                android:id="@+id/logpart2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+
+                <!--<ImageView
+                    android:id="@+id/imgsplash"
+                    android:layout_width="275dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/ic_un_logo" />-->
+                <ImageView
+                    android:id="@+id/imgsplash"
+                    android:layout_width="300dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/splash" />
+
+                <TextView
+                    android:id="@+id/tv_outlet_name"
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name" />
+
+                <LinearLayout
+                    android:id="@+id/loginpart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/labelor"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+
+                    <EditText
+                        android:id="@+id/txtlogin"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/labelor"
+                        android:layout_marginTop="5dp"
+                        android:hint="Primary Mobile (9715xxxxxxxx)"
+                        android:inputType="number"
+                        android:maxLength="12"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/txtpin"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtlogin"
+                        android:layout_marginTop="20dp"
+                        android:hint="4 Digit PIN"
+                        android:inputType="numberPassword"
+                        android:maxLength="4"
+                        android:textColorHint="@color/hintcolor"
+
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+
+                <android.widget.Button
+                    android:id="@+id/btnlogin"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/loginpart"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@layout/round_corner_image_button_main"
+                    android:gravity="center"
+                    android:text="Login"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+                <android.widget.Button
+                    android:id="@+id/btnforgotpin"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/btnlogin"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="Help I've forgotten my PIN!"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14dp" />
+
+                <android.widget.Button
+                    android:id="@+id/btnregister"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/btnforgotpin"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@layout/round_corner_image_button_dark"
+                    android:gravity="center"
+                    android:text="Register"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/progressBar8"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:elevation="10dp"
+        android:visibility="invisible" />
+</RelativeLayout>

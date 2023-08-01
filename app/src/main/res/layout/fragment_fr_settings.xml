@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backgroundBeige"
+    tools:context="layout.fr_settings">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/tbActivityMain"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tbActivityMain"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:padding="10dp"
+        card_view:cardCornerRadius="0dp"
+        card_view:contentPadding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+
+            <Switch
+                android:id="@+id/switchcity"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:text="I will accept orders for the full city limits"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12dp" />
+
+            <Switch
+                android:id="@+id/switchoffer"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/switchcity"
+                android:layout_marginTop="15dp"
+                android:text="I will participate in offers and promotion campaigns"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12dp" />
+
+
+            <android.widget.Button
+                android:id="@+id/btnhome"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/switchoffer"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:background="@layout/round_corner_image_button_main"
+                android:text="Save Settings"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/progressBar9"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+</RelativeLayout>

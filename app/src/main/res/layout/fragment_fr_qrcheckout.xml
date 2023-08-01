@@ -1,0 +1,171 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundBeige"
+    tools:context="layout.fr_qrcheckout">
+
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/tbActivityMain"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" />
+
+    <ScrollView
+        android:id="@+id/accscroll"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tbActivityMain"
+        android:scrollbars = "vertical">
+        <LinearLayout
+            android:id="@+id/fillcart"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+    <TextView
+        android:id="@+id/lblpaymobile"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textAlignment="textStart"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimary"
+        android:textSize="16dp"
+        android:textStyle="normal"/>
+
+    <TextView
+        android:id="@+id/lblpayqr"
+        android:layout_below="@id/lblpaymobile"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textAlignment="center"
+        android:text="Scan Wallet QR"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimaryDark"
+        android:textSize="15dp"
+        android:textStyle="normal"/>
+<RelativeLayout
+    android:layout_below="@id/lblpaymobile"
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+            <ImageView
+                android:id="@+id/imgsplash"
+                android:gravity="center"
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="150dp"
+                android:src="@drawable/ic_un_logo"
+                android:scaleType="fitCenter"/>
+</RelativeLayout>
+            <TextView
+                android:id="@+id/lblbank"
+                android:layout_below="@id/imgsplash"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:textAlignment="textStart"
+                android:text="Scan Wallet QR"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:background="@color/colorPrimary"
+                android:textSize="15dp"
+                android:textStyle="normal"/>
+
+            <TextView
+                android:id="@+id/lblpaydetail"
+                android:layout_below="@id/lblbank"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textAlignment="center"
+                android:text="Scan Wallet QR"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:background="@color/colorTextLight"
+                android:textSize="15dp"
+                android:textStyle="normal"/>
+        <LinearLayout
+            android:id="@+id/qa1y"
+            android:layout_below="@id/labely"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/la1"
+                android:layout_width="250dp"
+                android:layout_marginTop="5dp"
+                android:layout_height="15dp"
+                android:textAlignment="textStart"
+                android:text="Payment Reference"
+                android:textColor="@color/greyText"
+                android:background="@color/white"
+                android:textSize="10sp"/>
+
+            <EditText
+                android:id="@+id/txtreference"
+                android:layout_below="@id/la1"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:maxLength="20"
+                android:inputType="numberDecimal"
+                android:height="30dp"
+                android:hint="Enter Payment Reference"
+                android:textColorHint="@color/hintcolor"/>
+            <TextView
+                android:id="@+id/la2"
+                android:layout_width="250dp"
+                android:layout_height="15dp"
+                android:textAlignment="textStart"
+                android:text="Payment Amount"
+                android:textColor="@color/greyText"
+                android:background="@color/white"
+                android:textSize="10sp"/>
+
+            <EditText
+                android:id="@+id/txtamount"
+                android:layout_below="@id/la2"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:maxLength="20"
+                android:editable="false"
+                android:inputType="numberDecimal"
+                android:height="30dp"
+                android:hint="Enter Payment Amount"
+                android:textColorHint="@color/hintcolor"/>
+        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/buttonplace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+                <android.widget.Button
+                    android:id="@+id/btnaccept"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@color/white"
+                    android:text="COMPLETE PAYMENT"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+</ScrollView>
+    <ProgressBar
+        android:id="@+id/progressBar20"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

@@ -1,0 +1,139 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundBeige"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    tools:context="layout.fr_vendorratingpay">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/tbActivityMain"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" />
+
+    <androidx.cardview.widget.CardView
+        android:elevation="20dp"
+        android:id="@+id/card_view"
+        android:layout_below="@id/tbActivityMain"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        card_view:cardCornerRadius="0dp"
+        card_view:contentPadding="10dp">
+
+        <RelativeLayout
+            android:layout_below="@id/tbActivityMain"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/actionoption"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/radaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/success"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:padding="5dp"
+                        android:text="Completed"
+                        android:textColor="@color/colorTextDark"
+                        android:textSize="12dp" />
+
+                    <RadioButton
+                        android:id="@+id/reject"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Rejected"
+                        android:textColor="@color/colorTextDark"
+                        android:textSize="12dp" />
+
+                </RadioGroup>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/quest1"
+                android:layout_below="@id/actionoption"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="40dp"
+                android:textAlignment="center"
+                android:text="@string/please_rate_your_experience_with_the_vendor_customer"
+                android:textColor="@color/colorTextDark"
+                android:textSize="14sp"
+                android:textStyle="normal"/>
+
+            <RatingBar
+                android:id="@+id/ratingstar"
+                style="@style/Widget.AppCompat.RatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/quest1"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:rating="1"
+                android:stepSize=".5" />
+
+            <EditText
+                android:id="@+id/txtAddinfo"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/ratingstar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:padding="5dp"
+                android:textColor="@color/colorTextDark"
+                android:textSize="14sp"
+                android:background="@color/grayBG"
+                android:hint="@string/enter_few_lines_on_how_was_the_experience_with_the_vendor_were_you_satisfied_with_his_work_will_you_receommend_him_to_others"
+                android:gravity="start"
+                android:textColorHint="@color/greyText"
+                tools:capitalize="sentences"
+                android:inputType="textCapSentences"
+                android:digits="qwertyuiopasdfghjklzxcvbnm 1234567890 QWERTYUIOPASDFGHJKLZXCVBNM +-/*?_=!@#$%^()\.,"
+                android:autofillHints="" tools:targetApi="o" />
+
+            <android.widget.Button
+                android:id="@+id/btnhome"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:text="@string/make_payment"
+                android:textSize="14sp"
+                android:layout_below="@id/txtAddinfo"
+                android:layout_centerHorizontal="true"
+                />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <ProgressBar
+        android:elevation="10dp"
+        android:id="@+id/progressBar9"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+</RelativeLayout>

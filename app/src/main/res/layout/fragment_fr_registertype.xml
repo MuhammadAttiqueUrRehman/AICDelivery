@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundBeige"
+    android:clickable="true"
+    tools:context="layout.fr_registertype">
+
+    <include
+        android:id="@+id/tbActivityMain"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tbActivityMain"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        card_view:cardCornerRadius="0dp"
+        card_view:contentPadding="10dp">
+
+        <LinearLayout
+            android:id="@+id/logpart2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/imgsplash"
+                android:layout_width="275dp"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="50dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/un_logo" />
+
+            <TextView
+                android:id="@+id/label3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgsplash"
+                android:layout_marginTop="30dp"
+                android:text="I AM A"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <android.widget.Button
+                android:id="@+id/btnprof"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/loginpart"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@layout/round_corner_image_button_main"
+                android:gravity="center"
+                android:text="Delivery Outlet"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+
+            <android.widget.Button
+                android:id="@+id/btnpromo"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/btnforgotpin"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@layout/round_corner_image_button_main"
+                android:gravity="center"
+                android:text="Promoter"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/progressBar8"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible" />
+
+</RelativeLayout>

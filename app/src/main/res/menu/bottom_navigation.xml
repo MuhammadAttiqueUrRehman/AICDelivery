@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ico_home"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/nav_videos"
+        android:icon="@drawable/ico_video"
+        android:title="Videos" />
+
+    <item
+        android:id="@+id/nav_review"
+        android:icon="@drawable/ico_review"
+        android:title="Reviews"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/nav_faq"
+        android:icon="@drawable/ico_faq"
+        android:title="Share App"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/nav_user"
+        android:icon="@drawable/ico_account"
+        android:title="My Account" />
+
+</menu>

@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundBeige"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="layout.MerchantSetupFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_viewMerchat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:elevation="5dp"
+        card_view:cardCornerRadius="0dp"
+        card_view:contentPadding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Merchant code setup"
+                android:textSize="21sp" />
+
+            <EditText
+                android:id="@+id/et_marchant"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtlogin"
+                android:layout_marginTop="20dp"
+                android:hint="Merchant code"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColorHint="@color/hintcolor"
+                android:textSize="14dp" />
+
+
+            <EditText
+                android:id="@+id/et_token"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtlogin"
+                android:layout_marginTop="20dp"
+                android:hint="Reference"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColorHint="@color/hintcolor"
+                android:textSize="14dp" />
+
+            <android.widget.Button
+                android:id="@+id/btnverify"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/loginpart"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@layout/round_corner_image_button_main"
+                android:gravity="center"
+                android:text="Verify"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+        </LinearLayout>
+            <ProgressBar
+                android:id="@+id/progressBar8"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:elevation="10dp"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

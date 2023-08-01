@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backgroundBeige"
+    android:layout_marginTop="0dp"
+    tools:context="layout.fr_refererdashboard">
+
+    <!-- TODO: Update blank fragment layout -->
+    <include layout="@layout/toolbar"
+        android:id="@+id/tbActivityMain"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:elevation="10dp"
+        android:layout_below="@id/tbActivityMain"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        card_view:cardCornerRadius="0dp"
+        card_view:contentPadding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:id="@+id/loginpart2">
+
+
+
+            <TextView
+                android:id="@+id/lbldesc"
+                android:text="Referrals"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:id="@+id/lblreferal"
+                android:text="0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="40sp"
+                android:layout_marginTop="20dp"
+                android:textStyle="normal"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/lbldesc"
+                />
+
+
+            <TextView
+                android:id="@+id/lbldesc1"
+                android:layout_below="@+id/lblreferal"
+                android:text="Transactions this month"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                android:layout_marginTop="50dp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:id="@+id/lbltxn"
+                android:text="0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="40sp"
+                android:layout_marginTop="20dp"
+                android:textStyle="normal"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/lbldesc1"
+                />
+
+            <android.widget.Button
+                android:id="@+id/btnrefresh"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:background="@layout/round_corner_image_button_main"
+                android:textColor="@color/white"
+                android:text="Refresh"
+                android:textSize="14dp"
+                android:layout_below="@id/lbltxn"
+                android:layout_gravity="center_horizontal"
+                />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:elevation="5dp"
+        android:id="@+id/progressBar4"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+</RelativeLayout>

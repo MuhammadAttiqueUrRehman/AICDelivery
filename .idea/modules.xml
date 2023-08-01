@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/aicdelivery.iml" filepath="$PROJECT_DIR$/.idea/modules/aicdelivery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PayTabs_SDK/aicdelivery.PayTabs_SDK.iml" filepath="$PROJECT_DIR$/.idea/modules/PayTabs_SDK/aicdelivery.PayTabs_SDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/aicdelivery.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/aicdelivery.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/aicdelivery.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/aicdelivery.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/aicdelivery.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/aicdelivery.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/aicdelivery.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/aicdelivery.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jettison-1.3.3/aicdelivery.jettison-1.3.3.iml" filepath="$PROJECT_DIR$/.idea/modules/jettison-1.3.3/aicdelivery.jettison-1.3.3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/libs/aicdelivery.libs.iml" filepath="$PROJECT_DIR$/.idea/modules/libs/aicdelivery.libs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/libs/picasso-master/aicdelivery.libs.picasso-master.iml" filepath="$PROJECT_DIR$/.idea/modules/libs/picasso-master/aicdelivery.libs.picasso-master.iml" />
+    </modules>
+  </component>
+</project>

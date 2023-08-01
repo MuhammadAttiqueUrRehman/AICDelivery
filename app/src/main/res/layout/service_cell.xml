@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/serviceidx"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="30dp">
+
+            <CheckedTextView
+                android:id="@+id/check"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:checked="false"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableEnd="@null"
+                android:drawableRight="@null"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="this is CheckedTextView"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorLink="@color/colorButton"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:padding="3dp"
+        android:layout_height="1dp"
+        android:background="@color/backgroundBeige"
+        android:layout_below="@id/serviceidx"></View>
+
+    <ProgressBar
+        android:id="@+id/progressBar8"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible" />
+
+</RelativeLayout>

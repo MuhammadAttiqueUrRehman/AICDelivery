@@ -1,0 +1,63 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.aic.aicdelivery.layout.fr_error">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/tbActivityMain"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/tbActivityMain"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/emptyshop"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/shopempty"
+            android:gravity="center"
+            android:scaleType="centerInside"/>
+
+        <TextView
+            android:id="@+id/labelor1"
+            android:text="Please Login Below"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="normal"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:lines="2"
+            android:layout_below="@id/emptyshop"
+            />
+
+        <android.widget.Button
+            android:id="@+id/btnretry"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:background="@layout/round_corner_image_button_main"
+            android:textColor="@color/white"
+            android:text="Login"
+            android:textSize="14dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/labelor"/>
+
+    </LinearLayout>
+
+</FrameLayout>

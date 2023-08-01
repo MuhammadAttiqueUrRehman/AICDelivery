@@ -1,0 +1,292 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundBeige"
+    android:clickable="true"
+    tools:context="layout.fr_promoter">
+
+    <include
+        android:id="@+id/tbActivityMain"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentBottom="false"
+        android:layout_centerVertical="true" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btncreateaccount"
+        android:layout_below="@id/tbActivityMain"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:elevation="5dp"
+        android:padding="10dp"
+        card_view:cardCornerRadius="0dp"
+        card_view:contentPadding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ScrollView
+                android:id="@+id/accscroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:background="@color/white"
+                android:fillViewport="true"
+                android:scrollbars="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/logpart2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/loginpart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+
+                        <EditText
+                            android:id="@+id/txtfullname"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:digits="qwertyuiopasdfghjklzxcvbnm 1234567890 QWERTYUIOPASDFGHJKLZXCVBNM +-/*?_=!@#$%^()\.,"
+                            android:hint="Full Name"
+                            android:inputType="textCapWords"
+                            android:maxLength="40"
+                            android:textColorHint="@color/hintcolor"
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/txtmobile1"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtfullname"
+                            android:layout_marginTop="5dp"
+                            android:hint="Primary Mobile (9715xxxxxxxx)"
+                            android:inputType="number"
+                            android:maxLength="12"
+                            android:text=""
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/txtmobile2"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtmobile1"
+                            android:layout_marginTop="5dp"
+                            android:hint="Alternate Mobile (9715xxxxxxxx)"
+                            android:inputType="number"
+                            android:maxLength="12"
+                            android:text=""
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/txtemail"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtmobile2"
+                            android:layout_marginTop="5dp"
+                            android:hint="Email Address"
+                            android:inputType="textEmailAddress"
+                            android:maxLength="60"
+                            android:textColorHint="@color/hintcolor"
+
+                            android:textSize="14dp" />
+
+                        <LinearLayout
+                            android:id="@+id/genderoption"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtemail"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <RadioGroup
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/male"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:padding="5dp"
+                                    android:text="Male"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="12dp" />
+
+                                <RadioButton
+                                    android:id="@+id/female"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="Female"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="12dp" />
+
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/address"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:digits="qwertyuiopasdfghjklzxcvbnm 1234567890 QWERTYUIOPASDFGHJKLZXCVBNM +-/*?_=!@#$%^()\.,"
+                            android:hint="Address or Landmark"
+                            android:inputType="textImeMultiLine"
+                            android:lines="3"
+                            android:paddingRight="30dp"
+                            android:textColorHint="@color/hintcolor"
+                            android:textSize="14dp" />
+
+                        <RelativeLayout
+                            android:id="@+id/addressset"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtemail"
+                            android:layout_marginTop="5dp">
+
+                            <EditText
+                                android:id="@+id/addressloc"
+                                android:layout_width="220dp"
+                                android:layout_height="wrap_content"
+                                android:digits="qwertyuiopasdfghjklzxcvbnm 1234567890 QWERTYUIOPASDFGHJKLZXCVBNM +-/*?_=!@#$%^()\.,"
+                                android:editable="false"
+                                android:enabled="false"
+                                android:hint="Select GeoLocation"
+                                android:paddingRight="30dp"
+                                android:textColorHint="@color/hintcolor"
+                                android:textSize="14dp" />
+
+                            <ImageButton
+                                android:id="@+id/btnlocation"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_toRightOf="@id/addressloc"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:src="@drawable/ico_marker" />
+                        </RelativeLayout>
+
+                        <EditText
+                            android:id="@+id/txtaccount"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtmobile2"
+                            android:layout_marginTop="5dp"
+                            android:hint="Bank Account IBAN"
+                            android:inputType="textCapCharacters"
+                            android:maxLength="60"
+                            android:textColorHint="@color/hintcolor"
+
+                            android:textSize="14dp" />
+
+                        <RelativeLayout
+                            android:id="@+id/bankset"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtemail"
+                            android:layout_marginTop="5dp">
+
+                            <EditText
+                                android:id="@+id/txtifsccode"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:height="60dp"
+                                android:digits="qwertyuiopasdfghjklzxcvbnm 1234567890 QWERTYUIOPASDFGHJKLZXCVBNM +-/*?_=!@#$%^()\.,"
+                                android:hint="Bank Name"
+                                android:inputType="textCapCharacters"
+                                android:maxLength="45"
+                                android:paddingRight="30dp"
+                                android:textColorHint="@color/hintcolor"
+                                android:textSize="14dp" />
+
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/labelor"
+                            android:layout_width="250dp"
+                            android:layout_height="20dp"
+                            android:layout_below="@id/bankset"
+                            android:layout_marginTop="5dp"
+                            android:text="*All Fields are required"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/hintcolor"
+                            android:textSize="10dp"
+                            android:textStyle="normal" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/loginpart1"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/loginpart"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <Switch
+                            android:id="@+id/switchtc"
+                            android:layout_width="250dp"
+                            android:layout_height="40dp"
+                            android:text="Accept Terms &amp; Conditions"
+
+                            android:textColor="@color/colorPrimaryDark" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <android.widget.Button
+        android:id="@+id/btncreateaccount"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimary"
+        android:text="Continue"
+        android:textColor="@color/white"
+        android:textSize="14dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar11"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:elevation="10dp"
+        android:visibility="invisible" />
+
+</RelativeLayout>
+

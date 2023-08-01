@@ -1,0 +1,428 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundBeige"
+    tools:context="layout.fr_vendorreviewsingle">
+
+    <!-- TODO: Update blank fragment layout -->
+    <include layout="@layout/toolbarsearch"
+        android:id="@+id/tbActivityMain"
+        android:visibility="visible"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" />
+
+    <LinearLayout
+        android:id="@+id/fillcart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/tbActivityMain"
+        android:visibility="visible">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:id="@+id/mainbar"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_weight=".7"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/listImage"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop"
+                android:padding="5dp"
+                android:src="@drawable/haal_meer_large"
+                app:civ_border_color="@color/colorAccent"/>
+            <TextView
+                android:id="@+id/outlet"
+                android:text="Android User"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_alignParentTop="true"
+                android:textAlignment="textStart"
+                android:layout_toRightOf="@id/listImage"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+                android:paddingTop="5dp"
+                android:paddingLeft="10dp"
+                android:textStyle="normal" />
+            <TextView
+                android:id="@+id/category"
+                android:text="Carpenter"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textAlignment="textStart"
+                android:layout_toRightOf="@id/listImage"
+                android:layout_below="@id/outlet"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+                android:paddingTop="5dp"
+                android:paddingLeft="10dp"
+                android:textStyle="normal"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/section2"
+            android:layout_width="0dp"
+            android:layout_weight=".3"
+            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/avgrating"
+                android:text="3.5 Stars"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:paddingTop="5dp"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+                android:textStyle="normal"/>
+            <TextView
+                android:id="@+id/totalreviews"
+                android:layout_below="@id/avgrating"
+                android:text="15 Reviews"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+                android:paddingTop="5dp"
+                android:textStyle="normal"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/starbar"
+        android:layout_below="@id/mainbar"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/rate1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_height="30dp">
+
+            <TextView
+                android:id="@+id/textrate1"
+                android:text="45 Reviews"
+                android:layout_width="0dp"
+                android:layout_weight=".3"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:textAlignment="textEnd"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+            <RatingBar
+                android:id="@+id/ratingnum1"
+                style="@style/Widget.AppCompat.RatingBar.Indicator"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:isIndicator="false"
+                android:textAlignment="textStart"
+                android:max="5"
+                android:numStars="5"
+                android:rating="1"
+                android:scaleX="0.3"
+                android:scaleY="0.3"
+                android:stepSize=".1" />
+            <TextView
+                android:id="@+id/fill100"
+                android:layout_width="0dp"
+                android:layout_weight=".2"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingTop="8dp"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+                android:text="5 Stars"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/rate2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_height="30dp">
+
+            <TextView
+                android:id="@+id/textrate2"
+                android:text="45 Reviews"
+                android:layout_width="0dp"
+                android:layout_weight=".3"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingTop="8dp"
+                android:textAlignment="textEnd"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+            <RatingBar
+                android:id="@+id/ratingnum2"
+                style="@style/Widget.AppCompat.RatingBar.Indicator"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:isIndicator="false"
+                android:textAlignment="textStart"
+                android:max="5"
+                android:numStars="5"
+                android:rating="1"
+                android:scaleX="0.3"
+                android:scaleY="0.3"
+                android:stepSize=".1" />
+            <TextView
+                android:id="@+id/fill200"
+                android:layout_width="0dp"
+                android:layout_weight=".2"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingTop="8dp"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+                android:text="4 Stars"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rate3"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_height="30dp">
+            <TextView
+                android:id="@+id/textrate3"
+                android:text="45 Reviews"
+                android:layout_width="0dp"
+                android:layout_weight=".3"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingTop="8dp"
+                android:textAlignment="textEnd"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+            <RatingBar
+                android:id="@+id/ratingnum3"
+                style="@style/Widget.AppCompat.RatingBar.Indicator"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:isIndicator="false"
+                android:textAlignment="textStart"
+                android:max="5"
+                android:numStars="5"
+                android:rating="1"
+                android:scaleX="0.3"
+                android:scaleY="0.3"
+                android:stepSize=".1" />
+            <TextView
+                android:id="@+id/fill300"
+                android:layout_width="0dp"
+                android:layout_weight=".2"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingTop="8dp"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimary"
+                android:text="3 Stars"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rate4"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_height="30dp">
+
+            <TextView
+                android:id="@+id/textrate4"
+                android:text="45 Reviews"
+                android:layout_width="0dp"
+                android:layout_weight=".3"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingTop="8dp"
+                android:textAlignment="textEnd"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+            <RatingBar
+                android:id="@+id/ratingnum4"
+                style="@style/Widget.AppCompat.RatingBar.Indicator"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:isIndicator="false"
+                android:textAlignment="textStart"
+                android:max="5"
+                android:numStars="5"
+                android:rating="1"
+                android:scaleX="0.3"
+                android:scaleY="0.3"
+                android:stepSize=".1" />
+            <TextView
+                android:id="@+id/fill400"
+                android:layout_width="0dp"
+                android:layout_weight=".2"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingTop="8dp"
+                android:textAlignment="textStart"
+                android:text="2 Stars"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rate5"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_height="30dp">
+
+            <TextView
+                android:id="@+id/textrate5"
+                android:text="45 Reviews"
+                android:layout_width="0dp"
+                android:layout_weight=".3"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingTop="8dp"
+                android:textAlignment="textEnd"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+            <RatingBar
+                android:id="@+id/ratingnum5"
+                style="@style/Widget.AppCompat.RatingBar.Indicator"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:isIndicator="false"
+                android:textAlignment="textStart"
+                android:max="5"
+                android:numStars="5"
+                android:rating="1"
+                android:scaleX="0.3"
+                android:scaleY="0.3"
+                android:stepSize=".1" />
+            <TextView
+                android:id="@+id/fill500"
+                android:layout_width="0dp"
+                android:layout_weight=".2"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingTop="8dp"
+                android:textAlignment="textStart"
+                android:text="1 Star"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/messqagelist"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:listSelector="@android:color/transparent"
+            android:background="@android:color/white"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/emptycart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/emptyshop"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:scaleType="centerInside"
+                android:src="@drawable/shopempty" />
+
+            <TextView
+                android:id="@+id/labelor"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/tbActivityMainSearch"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:lines="2"
+                android:text="There are no reviews currently available."
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progressBar4"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+</RelativeLayout>

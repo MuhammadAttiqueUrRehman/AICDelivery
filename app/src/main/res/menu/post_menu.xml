@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_contactcustomer"
+        android:icon="@drawable/ico_call"
+        android:iconTint="@color/white"
+        android:iconTintMode="screen"
+        android:orderInCategory="20"
+        android:title="Contact Customer"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_changepin"
+        android:iconTint="@color/white"
+        android:iconTintMode="screen"
+        android:orderInCategory="20"
+        android:title="Change PIN"
+        app:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/menu_feedback"
+        android:iconTint="@color/white"
+        android:iconTintMode="screen"
+        android:orderInCategory="30"
+        android:title="Feedback"
+        app:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/menu_info"
+        android:iconTint="@color/white"
+        android:iconTintMode="screen"
+        android:orderInCategory="40"
+        android:title="About Us"
+        app:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/menu_contactus"
+        android:iconTint="@color/white"
+        android:iconTintMode="screen"
+        android:orderInCategory="50"
+        android:title="Contact Us"
+        app:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/menu_dataprivacy"
+        android:iconTint="@color/white"
+        android:iconTintMode="screen"
+        android:orderInCategory="60"
+        android:title="Data Privacy"
+        app:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/menu_tandc"
+        android:iconTint="@color/white"
+        android:iconTintMode="screen"
+        android:orderInCategory="70"
+        android:title="Terms &amp; Conditions"
+        app:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/menu_logout"
+        android:iconTint="@color/white"
+        android:iconTintMode="screen"
+        android:orderInCategory="80"
+        android:title="Logout"
+        app:showAsAction="collapseActionView" />
+</menu>

@@ -1,0 +1,84 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    compileSdkVersion 33
+    defaultConfig {
+        applicationId "com.aic.rmpartner"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+    }
+    namespace 'com.aic.aicdelivery'
+}
+
+configurations {
+    //  all*.exclude group: 'com.squareup.okio'
+    //   all*.exclude group: 'com.squareup.okhttp3'
+    all*.exclude group: 'com.android.support', module: 'support-v13'
+    //   all*.exclude group: 'org.jetbrains.kotlinx', module: 'kotlinx-coroutines-core-jvm'
+
+}
+
+
+configurations.all {
+    resolutionStrategy {
+        exclude group: "org.jetbrains.kotlinx", module: "kotlinx-coroutines-debug"
+    }
+}
+
+dependencies {
+//    implementation 'com.github.bachors:Android-Prefix-Input:1.1'
+    implementation 'androidx.fragment:fragment:1.4.1'
+    implementation 'androidx.appcompat:appcompat:1.3.0-rc01'
+    implementation 'com.facebook.android:facebook-login:[4,5)'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    //noinspection GradleCompatible
+//    implementation 'androidx.appcompat:appcompat:1.0.0'
+//    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.multidex:multidex:2.0.0'
+    //Recycler View
+   implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    //Cardview
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.miguelcatalan:materialsearchview:1.4.0'
+    implementation 'com.google.android.gms:play-services-maps:15.0.1'
+    implementation 'com.google.android.gms:play-services-places:15.0.1'
+    implementation 'com.google.android.libraries.places:places:1.0.0'
+    implementation 'com.google.android.gms:play-services-location:15.0.1'
+    implementation 'com.google.android.gms:play-services-analytics:15.0.2'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.google.firebase:firebase-messaging:17.0.0'
+    implementation 'com.google.firebase:firebase-dynamic-links:16.1.7'
+
+}
+//com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true
+googleServices { disableVersionCheck = true }

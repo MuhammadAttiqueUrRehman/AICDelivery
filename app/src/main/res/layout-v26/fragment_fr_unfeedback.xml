@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundBeige"
+    tools:context="layout.fr_unfeedback">
+
+    <include
+        android:id="@+id/tbActivityMain"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tbActivityMain"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:elevation="5dp"
+        card_view:cardCornerRadius="0dp"
+        card_view:contentPadding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/quest1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/please_rate_your_experience_with_the_khidmanow"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+            <RatingBar
+                android:id="@+id/ratingstar"
+                style="@style/Widget.AppCompat.RatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/quest1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:rating="0"
+                android:stepSize=".5" />
+
+            <EditText
+                android:id="@+id/txtAddinfo"
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/ratingstar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:autofillHints=""
+                android:background="@color/grayBG"
+                android:digits="qwertyuiopasdfghjklzxcvbnm 1234567890 QWERTYUIOPASDFGHJKLZXCVBNM +-/*?_=!@#$%^()\.,"
+                android:gravity="start"
+                android:hint="@string/enter_few_lines_on_how_was_the_experience_with_the_khidmanow_were_you_satisfied_with_his_work_will_you_receommend_him_to_others"
+                android:inputType=""
+                android:padding="5dp"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/greyText"
+                android:textSize="12sp"
+                tools:capitalize="sentences"
+                tools:targetApi="o" />
+
+            <android.widget.Button
+                android:id="@+id/btnhome"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/txtAddinfo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@layout/round_corner_image_button_main"
+                android:text="@string/send_feedback"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/progressBar9"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:elevation="10dp"
+        android:visibility="invisible" />
+
+</RelativeLayout>

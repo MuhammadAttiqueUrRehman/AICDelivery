@@ -1,0 +1,54 @@
+<resources>
+    <string name="default_notification_channel_id">KHIDMANOW</string>
+    <string name="app_name">AIC Delivery</string>
+    <string name="Rs">AED</string>
+    <string name="maps_api_key">AIzaSyBbKmS3NldYxzZX7YRnc7WE7Z5x5D4kr-U</string>
+    <string name="facebook_app_id">2370052136383445</string>
+    <string name="fb_login_protocol_scheme">fb2370052136383445</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="ver_1_0">Ver 1.02</string>
+    <string name="todo">TODO</string>
+    <string name="complain">Complain</string>
+    <string name="close">Customer Location</string>
+    <string name="otp">Accept Booking</string>
+    <string name="reject">Reject Order</string>
+    <string name="vendor">Show Detail</string>
+
+    <string name="please_rate_your_experience_with_the_vendor_customer">Ask the customer to tap a rating and provide feedback.</string>
+    <string name="cancel">Cancel order</string>
+    <string name="please_rate_your_experience_with_the_khidmanow">Please rate your experience with the AiC Delivery Partner app</string>
+    <string name="make_payment">Goto Payment</string>
+    <string name="enter_few_lines_on_how_was_the_experience_with_the_vendor_were_you_satisfied_with_his_work_will_you_receommend_him_to_others">Enter few lines on how was the experience with the vendor, were you satisfied with his work. Will you recommend him to others.</string>
+    <string name="enter_few_lines_on_how_was_the_experience_with_the_khidmanow_were_you_satisfied_with_his_work_will_you_receommend_him_to_others">Enter few lines on how was the experience with the AiC Delivery Partner app and its services, were you satisfied with the features, Do you want to recommend any new functionalities or improve the current ones. We will be glad to know your opinion</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="send_feedback">Send Feedback</string>
+    <string name="welcome_to_aic_delivery_your_marketing_partner_get_new_service_orders_right_on_your_mobile">Welcome to AiC Delivery! Your marketing partner. Get new service orders right on your mobile.</string>
+    <string name="be_a_part_of_aic_delivery_marketplace_and_get_connected_with_other_peers_increase_business_opportunities">Be a part of AiC Delivery marketplace and get connected with other peers. Increase business opportunities</string>
+
+    <string-array name="box_size">
+        <item>Small Box 23Lx23Wx10H cms</item>
+        <item>Medium Box 28Lx28Wx10H cms</item>
+        <item>Large Box 47Lx28Wx10H cms</item>
+        <item>Small Bag 30Lx35Wx10H cms</item>
+        <item>Medium Bag 40Lx35Wx10H cms</item>
+    </string-array>
+
+    <string-array name="box_weight">
+        <item>1 Lbs</item>
+        <item>2 Lbs</item>
+        <item>3 Lbs</item>
+        <item>4 Lbs</item>
+        <item>5 Lbs</item>
+        <item>6 Lbs</item>
+        <item>7 Lbs</item>
+        <item>8 Lbs</item>
+        <item>9 Lbs</item>
+        <item>10 Lbs</item>
+        <item>11 Lbs</item>
+        <item>12 Lbs</item>
+        <item>13 Lbs</item>
+        <item>14 Lbs</item>
+        <item>15 Lbs</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_info1"
+        android:orderInCategory="200"
+        android:iconTint="@color/white"
+        android:iconTintMode="screen"
+        android:title="About Us"
+        app:showAsAction="never" />
+
+
+    <item
+        android:id="@+id/menu_dataprivacy1"
+        android:orderInCategory="300"
+        android:iconTint="@color/white"
+        android:iconTintMode="screen"
+        android:title="Data Privacy"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_faq"
+        android:orderInCategory="300"
+        android:iconTint="@color/white"
+        android:iconTintMode="screen"
+        android:title="F A Q"
+        app:showAsAction="never" />
+</menu>

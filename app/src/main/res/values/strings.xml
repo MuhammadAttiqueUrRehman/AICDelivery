@@ -2,7 +2,7 @@
     <string name="default_notification_channel_id">KHIDMANOW</string>
     <string name="app_name">AIC Delivery</string>
     <string name="Rs">AED</string>
-    <string name="maps_api_key">AIzaSyBbKmS3NldYxzZX7YRnc7WE7Z5x5D4kr-U</string>
+    <string name="maps_api_key">AIzaSyBWi_EXzaQXv9fjf6AwYki7sI8_btueMmg </string>
     <string name="facebook_app_id">2370052136383445</string>
     <string name="fb_login_protocol_scheme">fb2370052136383445</string>
     <!-- TODO: Remove or change this placeholder text -->

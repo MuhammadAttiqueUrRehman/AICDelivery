@@ -39,12 +39,12 @@
 
             <ImageView
                 android:id="@+id/imgsplash"
-                android:layout_width="275dp"
+                android:layout_width="300dp"
                 android:layout_height="100dp"
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="50dp"
                 android:contentDescription="@string/todo"
-                android:src="@drawable/un_logo" />
+                android:src="@drawable/splash" />
 
             <TextView
                 android:id="@+id/label3"

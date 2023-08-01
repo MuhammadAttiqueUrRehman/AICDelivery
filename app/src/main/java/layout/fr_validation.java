@@ -49,7 +49,7 @@ public class fr_validation extends Fragment implements AsyncResponse {
     }
 
     private void showResend() {
-        new CountDownTimer(30000, 1000) {
+        new CountDownTimer(180000, 1000) {
 
             public void onTick(long millisUntilFinished) {
                 resendctr.setVisibility(View.VISIBLE);
@@ -333,7 +333,7 @@ public class fr_validation extends Fragment implements AsyncResponse {
         String[] myTaskParams = {"/SSMPartnerRegister", jsonParam.toString()};
         //  new HMDataAccess().execute(myTaskParams);
         try {
-            Log.i("Partner Register ", jsonParam.toString());
+            Log.i("Debugging", jsonParam.toString());
             HMDataAccess aasyncTask = new HMDataAccess(getActivity(), progressBar9, "SSMPartnerRegister");
             aasyncTask.delegate = (AsyncResponse) fr_validation.this;
             aasyncTask.execute(myTaskParams);

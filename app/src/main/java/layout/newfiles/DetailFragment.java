@@ -247,16 +247,13 @@ public class DetailFragment extends Fragment {
         }
 
         RecyclerView recyclerView = v.findViewById(R.id.rv_items);
-        ItemListAdapter adapter = new ItemListAdapter(requireContext(), orderId, orderList, show_save, new ItemListAdapter.OnQuantityListener() {
-            @Override
-            public void onItemQuantityChanged(ArrayList<Item> items) {
-                for (Item mItem : orderList) {
-                    if (mItem.getQuantity() != mItem.getDeliverqty()) {
-                        rb_partial.setChecked(true);
-                        break;
-                    } else {
-                        rb_full.setChecked(true);
-                    }
+        ItemListAdapter adapter = new ItemListAdapter(requireContext(), orderId, orderList, show_save, items -> {
+            for (Item mItem : orderList) {
+                if (mItem.getQuantity() != mItem.getDeliverqty()) {
+                    rb_partial.setChecked(true);
+                    break;
+                } else {
+                    rb_full.setChecked(true);
                 }
             }
         });
@@ -458,9 +455,9 @@ public class DetailFragment extends Fragment {
                     output = output.replace("\\", "");
 
                     Log.i("Debugging", "Booking Timeline Output :" + output);
-                    Toast.makeText(requireContext(), "Updated!", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(requireContext(), "Updated!", Toast.LENGTH_SHORT).show();
 
-                    requireActivity().onBackPressed();
+                   // requireActivity().onBackPressed();
                 }
             };
             aasyncTask.execute(myTaskParams);

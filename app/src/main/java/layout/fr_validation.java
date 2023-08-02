@@ -42,6 +42,8 @@ public class fr_validation extends Fragment implements AsyncResponse {
     private providerInfo providerinfo;
     private TextView resendctr;
 
+    CountDownTimer timer;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,8 +51,7 @@ public class fr_validation extends Fragment implements AsyncResponse {
     }
 
     private void showResend() {
-        new CountDownTimer(180000, 1000) {
-
+         timer = new CountDownTimer(180000, 1000) {
             public void onTick(long millisUntilFinished) {
                 resendctr.setVisibility(View.VISIBLE);
                 btnresendcode.setVisibility(View.GONE);
@@ -115,8 +116,14 @@ public class fr_validation extends Fragment implements AsyncResponse {
                     return;
                 }
                 if (strhandle.equals("promoter")) {
+                    if (timer!=null){
+                        timer.cancel();
+                    }
                     enrolpromoter();
                 } else if (strhandle.equals("provider")) {
+                    if (timer!=null){
+                        timer.cancel();
+                    }
                     enrolpartner();
                 } else if (strhandle.equals("pinchange")) {
                     getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
@@ -207,6 +214,10 @@ public class fr_validation extends Fragment implements AsyncResponse {
             strtext = myjson.getString("referencenumber");
             myDB.showToast(getContext(), "OTP sent to your mobile and email");
             return;
+        }
+
+        if (timer!=null){
+            timer.cancel();
         }
         if (handle.equals("SSMValidateToken")) {
             Fragment myFragment = new fr_reset_pin();

@@ -34,10 +34,10 @@ public class FirebaseMessagingService extends com.google.firebase.messaging.Fire
 
     private void displayCustomNotificationForOrders(String title, String description) {
         Log.d("msg", "onMessageReceived: " + description);
-        Bitmap bitmaps = BitmapFactory.decodeResource(getResources(), R.drawable.myicon);
+        Bitmap bitmaps = BitmapFactory.decodeResource(getResources(), R.drawable.nlogo);
         Intent intent = new Intent(this, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_IMMUTABLE);
         String channelId = "KHIDMANOW";
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, channelId)
                 .setSmallIcon(R.mipmap.ic_launcher)

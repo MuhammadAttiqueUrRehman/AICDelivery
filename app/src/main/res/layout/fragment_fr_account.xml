@@ -1,4 +1,5 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -258,7 +259,7 @@
                         android:padding="17dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/ico_setting"
-                        android:tint="@color/white" />
+                        app:tint="@color/white" />
 
                     <TextView
                         android:id="@+id/lblsettings"
@@ -276,7 +277,7 @@
 
                 <LinearLayout
                     android:id="@+id/line31a"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="0dp"
@@ -284,11 +285,11 @@
                     android:background="@color/white"
                     android:gravity="center_horizontal"
                     android:orientation="vertical"
-                    android:visibility="gone">
+                    >
 
 
                     <ImageButton
-                        android:id="@+id/btncashdeposit"
+                        android:id="@+id/btnorderstatus"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_centerHorizontal="true"
@@ -297,8 +298,8 @@
                         android:gravity="center"
                         android:padding="17dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/ico_cash"
-                        android:tint="@color/white" />
+                        android:src="@drawable/order_status_report_icon"
+                        app:tint="@color/white" />
 
                     <TextView
                         android:id="@+id/lblcashdepositform"
@@ -306,7 +307,7 @@
                         android:layout_height="30dp"
                         android:layout_centerHorizontal="true"
                         android:gravity="center"
-                        android:text="Cash Deposit"
+                        android:text="Order Status Repost"
                         android:textAlignment="center"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="10dp"
@@ -324,11 +325,11 @@
                     android:background="@color/white"
                     android:gravity="center_horizontal"
                     android:orientation="vertical"
-                    android:visibility="gone">
+                    android:visibility="visible">
 
 
                     <ImageButton
-                        android:id="@+id/btnreferlist"
+                        android:id="@+id/btnsalesreport"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_centerHorizontal="true"
@@ -337,8 +338,8 @@
                         android:gravity="center"
                         android:padding="17dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/ico_refer"
-                        android:tint="@color/white" />
+                        android:src="@drawable/sales_report_icon"
+                        app:tint="@color/white" />
 
                     <TextView
                         android:id="@+id/lblreferlist"
@@ -346,7 +347,7 @@
                         android:layout_height="30dp"
                         android:layout_centerHorizontal="true"
                         android:gravity="center"
-                        android:text="Ref. Dashboard"
+                        android:text="Sales Report"
                         android:textAlignment="center"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="10dp"

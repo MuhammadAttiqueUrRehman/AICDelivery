@@ -36,7 +36,7 @@ public class fr_account extends Fragment implements AsyncResponse {
     private CircleImageView pimage;
     private TextView username;
     private ScrollView scrlview;
-    private ImageButton btnprofile, btnemployee, btnfinance, btnmessage, btnsettings, btnreferlist;
+    private ImageButton btnprofile, btnemployee, btnfinance, btnmessage, btnsettings, btnreferlist, btnsalesreport,btnorderstatus;
     private ProgressBar progressBar13;
     private HMCoreData myDB;
     byte[] decodedBytes;
@@ -70,7 +70,9 @@ public class fr_account extends Fragment implements AsyncResponse {
         btnfinance = (ImageButton) v.findViewById(R.id.btnfinance);
         btnmessage = (ImageButton) v.findViewById(R.id.btnmessage);
         btnsettings = (ImageButton) v.findViewById(R.id.btnsettings);
-        btnreferlist = (ImageButton) v.findViewById(R.id.btnreferlist);
+        btnorderstatus = v.findViewById(R.id.btnorderstatus);
+        btnsalesreport = v.findViewById(R.id.btnsalesreport);
+        //btnreferlist = (ImageButton) v.findViewById(R.id.btnreferlist);
         Main2Activity.ln.setVisibility(View.VISIBLE);
         username.setText("Welcome " + intromanager.getEmployeeName() + "!");
 
@@ -110,13 +112,13 @@ public class fr_account extends Fragment implements AsyncResponse {
             }
         });
 
-        btnreferlist.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Fragment myFragment = new fr_refererdashboard();
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_0, myFragment).addToBackStack(null).commitAllowingStateLoss();
-            }
-        });
+//        btnreferlist.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Fragment myFragment = new fr_refererdashboard();
+//                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_0, myFragment).addToBackStack(null).commitAllowingStateLoss();
+//            }
+//        });
 
         btnmessage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -141,6 +143,21 @@ public class fr_account extends Fragment implements AsyncResponse {
             }
         });
 
+        btnsalesreport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment myFragment = new fr_Sales_Report();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_0, myFragment).addToBackStack(null).commitAllowingStateLoss();
+            }
+        });
+
+        btnorderstatus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment myFragment = new fr_OrderStatusReport();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_0, myFragment).addToBackStack(null).commitAllowingStateLoss();
+            }
+        });
 
         return v;
     }
